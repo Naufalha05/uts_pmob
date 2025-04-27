@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Maps</string>
+    <string name="home_button_desc">Home button</string>
+    <string name="profile_button_desc">Profile button</string>
+    <string name="cari_button_desc">Find button</string>
+    <string name="cuaca_button_desc">Weather button</string>
+    <string name="galeri_button_desc">Gallery button</string>
+
+</resources>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <!-- Background -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_login"
+        android:contentDescription="Background" />
+
+    <!-- Semi-transparent Overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B3000000" /> <!-- 70% hitam -->
+
+    <!-- Main Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Logo -->
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_logos"
+                android:contentDescription="App Logo"
+                android:layout_marginTop="24dp" />
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selamat datang di UINGO"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="16dp" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Navigasi kampus UIN SUSKA jadi lebih mudah"
+                android:textSize="14sp"
+                android:textColor="#DDDDDD"
+                android:layout_marginTop="8dp" />
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/input_background"
+                android:hint=" Email Address"
+                android:inputType="textEmailAddress"
+                android:drawableStart="@drawable/ic_email"
+                android:padding="12dp"
+                android:imeOptions="actionNext" />
+
+            <!-- Password -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <EditText
+                    android:id="@+id/passwordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/input_background"
+                    android:drawableStart="@drawable/lock"
+                    android:hint=" Password"
+                    android:inputType="textPassword"
+                    android:padding="12dp"
+                    android:imeOptions="actionDone" />
+
+                <ImageView
+                    android:id="@+id/passwordToggle"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_eye_off"
+                    android:contentDescription="Toggle Password" />
+            </RelativeLayout>
+
+            <!-- Error Message (initially gone) -->
+            <TextView
+                android:id="@+id/errorText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email atau password salah"
+                android:textColor="#FF4444"
+                android:visibility="gone"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp" />
+
+            <!-- Remember & Forgot -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Ingat saya"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/forgotPasswordText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="end"
+                    android:text="Lupa password?"
+                    android:textColor="#00B0FF"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- LOGIN Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LOGIN"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="8dp"
+                style="@style/Widget.MaterialComponents.Button"
+                app:cornerRadius="12dp"
+                app:iconPadding="8dp"
+                app:backgroundTint="#0000FF" />
+
+            <!-- Info Daftar -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Belum punya akun?"
+                android:textColor="#DDDDDD"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp" />
+
+            <!-- DAFTAR Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/registerButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DAFTAR"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="8dp"
+                style="@style/Widget.MaterialComponents.Button"
+                app:cornerRadius="12dp"
+                app:iconPadding="8dp"
+                app:backgroundTint="#4CAF50" />
+
+            <!-- OR Separator -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#AAAAAA" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ATAU"
+                    android:textColor="#AAAAAA"
+                    android:paddingHorizontal="8dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#AAAAAA" />
+            </LinearLayout>
+
+            <!-- Guest Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/guestButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Masuk sebagai Tamu"
+                android:layout_marginTop="24dp"
+                app:icon="@drawable/personfix"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                app:cornerRadius="12dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:backgroundTint="#FFFFFF" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

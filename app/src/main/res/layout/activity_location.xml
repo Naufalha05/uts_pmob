@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/locationRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".LocationActivity">
+
+    <!-- Zoomable Map -->
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/campusMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/map_usr"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        tools:ignore="MissingClass" />
+
+    <!-- Pin Fakultas -->
+    <ImageView
+        android:id="@+id/pinFEIS"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="190dp"
+        android:layout_marginStart="165dp"
+        android:src="@drawable/ic_tag"
+        android:contentDescription="FEIS" />
+
+    <ImageView
+        android:id="@+id/pinFST"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="180dp"
+        android:layout_marginStart="120dp"
+        android:src="@drawable/ic_tag"
+        android:contentDescription="FST" />
+
+    <ImageView
+        android:id="@+id/pinFASILKOM"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="270dp"
+        android:layout_marginStart="260dp"
+        android:src="@drawable/ic_tag"
+        android:contentDescription="FASILKOM" />
+
+    <ImageView
+        android:id="@+id/pinFIK"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="360dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_tag"
+        android:contentDescription="FIK" />
+
+    <ImageView
+        android:id="@+id/pinFEBI"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="290dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/ic_tag"
+        android:contentDescription="FEBI" />
+
+    <ImageView
+        android:id="@+id/pinTARBIYAH"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="90dp"
+        android:src="@drawable/ic_tag"
+        android:contentDescription="TARBIYAH" />
+
+    <ImageView
+        android:id="@+id/pinDAKWAH"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="200dp"
+        android:src="@drawable/ic_tag"
+        android:contentDescription="DAKWAH" />
+
+    <ImageView
+        android:id="@+id/pinSYARIAH"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="300dp"
+        android:layout_marginStart="130dp"
+        android:src="@drawable/ic_tag"
+        android:contentDescription="SYARIAH DAN HUKUM" />
+
+    <!-- Info Section -->
+    <LinearLayout
+        android:id="@+id/infoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:background="#DDFFFFFF"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/locationName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nama Lokasi"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/bookmarkIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_fav"
+            android:contentDescription="Bookmark" />
+    </LinearLayout>
+</FrameLayout>

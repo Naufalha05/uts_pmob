@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DaftarActivity">
+
+    <!-- Background -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_login"
+        android:contentDescription="Background" />
+
+    <!-- Semi-transparent Overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B3000000" />
+
+    <!-- Main Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buat Akun Baru"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="24dp" />
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" Email Address"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/input_background"
+                android:padding="12dp"
+                android:layout_marginTop="24dp"
+                android:drawableStart="@drawable/ic_email" />
+
+            <!-- Password -->
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" Password"
+                android:inputType="textPassword"
+                android:background="@drawable/input_background"
+                android:padding="12dp"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@drawable/lock" />
+
+            <!-- Confirm Password -->
+            <EditText
+                android:id="@+id/confirmPasswordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=" Confirm Password"
+                android:inputType="textPassword"
+                android:background="@drawable/input_background"
+                android:padding="12dp"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@drawable/lock" />
+
+            <!-- Error Message -->
+            <TextView
+                android:id="@+id/errorText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FF4444"
+                android:visibility="gone"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp" />
+
+            <!-- Register Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/registerButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DAFTAR SEKARANG"
+                android:layout_marginTop="24dp"
+                app:cornerRadius="12dp"
+                app:backgroundTint="#4CAF50"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

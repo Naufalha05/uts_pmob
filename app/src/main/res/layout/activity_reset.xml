@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResetActivity">
+
+    <!-- Background with overlay -->
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_reset"
+        android:contentDescription="Background" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#85000000" /> <!-- Semi-transparent overlay -->
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Logo/Icon -->
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_reset"
+                android:layout_marginTop="32dp"
+                android:contentDescription="Forgot Password Icon" />
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lupa Lagi, Ya?"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gak apa-apa, masukin email aja buat reset."
+                android:textSize="14sp"
+                android:textColor="#CCCCCC"
+                android:gravity="center"
+                android:layout_marginTop="8dp" />
+
+            <!-- Email Input -->
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/input_background"
+                android:hint=" Email Address"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:drawableStart="@drawable/ic_email" />
+
+            <!-- Feedback Text -->
+            <TextView
+                android:id="@+id/resetFeedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="#FFCDD2"
+                android:layout_marginTop="8dp"
+                android:visibility="gone" />
+
+            <!-- Send Button -->
+            <LinearLayout
+                android:id="@+id/sendResetButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="12dp"
+                android:background="@drawable/rounded_button">
+
+                <TextView
+                    android:id="@+id/sendResetText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send Email"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!-- Progress Bar (hidden by default) -->
+            <ProgressBar
+                android:id="@+id/resetProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                android:indeterminate="true" />
+
+            <!-- Back to Login -->
+            <TextView
+                android:id="@+id/backToLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back to Login"
+                android:textColor="#90CAF9"
+                android:textSize="14sp"
+                android:layout_marginTop="24dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
